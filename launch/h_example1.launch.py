@@ -4,7 +4,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     return LaunchDescription([
         Node(
-            package='bal_ca0_kisbeadando',
+            package='bal_ca0_proba',
             executable='square_wave_publisher',
             name='square_wave_node',
             output='screen',
@@ -16,3 +16,4 @@ def generate_launch_description():
             }]
         )
     ])
+

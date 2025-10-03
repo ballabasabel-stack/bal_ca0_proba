@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'bal_ca0_kisbeadando'
+package_name = 'bal_ca0_proba'
 
 setup(
     name=package_name,
@@ -10,7 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name, ['bal_ca0_kisbeadando/launch_example1.launch.py']),
+        ('share/' + package_name, ['bal_ca0_proba/launch_example1.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,7 +20,8 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'square_wave_publisher = bal_ca0_kisbeadando.square_wave_publisher:main',
+            'square_wave_publisher = bal_ca0_proba.square_wave_publisher:main',
         ],
     },
 )
+
