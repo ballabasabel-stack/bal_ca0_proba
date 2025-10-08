@@ -1,11 +1,12 @@
-<<?xml version="1.0"?>
+<?xml version="1.0"?>
 <package format="3">
   <name>bal_ca0_proba</name>
-  <version>0.0.2</version>
-  <description>Szinusz és koszinusz jel generáló ROS2 node</description>
-  <maintainer email="te@pelda.hu">Te</maintainer>
+  <version>0.0.1</version>
+  <description>Publikál szinusz és koszinusz jelet</description>
+  <maintainer email="abel@example.com">abel</maintainer>
   <license>MIT</license>
 
+  <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_python</buildtool_depend>
 
   <exec_depend>rclpy</exec_depend>

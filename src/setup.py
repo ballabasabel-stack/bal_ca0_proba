@@ -4,7 +4,7 @@ package_name = 'bal_ca0_proba'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='0.0.1',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -14,16 +14,15 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Your Name',
-    maintainer_email='you@example.com',
-    description='Publishes sine and cosine waves for visualization in rqt_plot',
+    maintainer='abel',
+    maintainer_email='abel@example.com',
+    description='Publikál szinusz és koszinusz jelet',
     license='MIT',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'trig_publisher = bal_ca0_proba.trig_publisher:main',
-            'trig_subscriber = bal_ca0_proba.trig_subscriber:main',
+            'trig_wave_publisher = bal_ca0_proba.trig_publisher:main',
+            'trig_wave_subscriber = bal_ca0_proba.trig_subscriber:main',
         ],
     },
 )
-
