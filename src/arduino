@@ -1,0 +1,13 @@
+~/ros2_ws/src/bal_ca0_proba/
+├── package.xml
+├── setup.py
+├── setup.cfg
+├── resource/
+│   └── bal_ca0_proba
+├── bal_ca0_proba/
+│   ├── __init__.py
+│   ├── trig_publisher.py
+│   └── trig_subscriber.py
+└── launch/
+    └── launch_example1.launch.py
+
