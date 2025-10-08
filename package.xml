@@ -4,7 +4,7 @@
   <version>0.0.1</version>
   <description>Publikál szinusz és koszinusz jelet</description>
   <maintainer email="abel@example.com">abel</maintainer>
-  <license>MIT</license>
+  <license>GNU GENERAL PUBLIC LICENSE</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_python</buildtool_depend>
@@ -13,6 +13,7 @@
   <exec_depend>std_msgs</exec_depend>
 
   <export>
-    <build_type>ament_python</build_type>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
+
