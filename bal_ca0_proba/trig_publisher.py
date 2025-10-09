@@ -9,17 +9,22 @@ class TrigPublisher(Node):
         self.publisher_sin = self.create_publisher(Float32, 'sin_wave', 10)
         self.publisher_cos = self.create_publisher(Float32, 'cos_wave', 10)
         self.timer = self.create_timer(0.1, self.timer_callback)
-        self.t = 10
+        self.t = 0.0
+        self.amplitude = 10.0  # <-- ez határozza meg a jel nagyságát (-10 ... +10)
 
     def timer_callback(self):
         sin_msg = Float32()
         cos_msg = Float32()
-        sin_msg.data = 10 * math.sin(self.t)
-        cos_msg.data = 10 * math.cos(self.t)
+
+        # Szorozzuk meg az eredményt az amplitúdóval (-10 és +10 közé kerül)
+        sin_msg.data = self.amplitude * math.sin(self.t)
+        cos_msg.data = self.amplitude * math.cos(self.t)
+
         self.publisher_sin.publish(sin_msg)
         self.publisher_cos.publish(cos_msg)
+
         self.get_logger().info(f'Sin: {sin_msg.data:.2f}, Cos: {cos_msg.data:.2f}')
-        self.t += 0.1
+        self.t += 0.1  # időlépés
 
 def main():
     rclpy.init()
