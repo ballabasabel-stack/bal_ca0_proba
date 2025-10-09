@@ -14,8 +14,8 @@ class TrigPublisher(Node):
     def timer_callback(self):
         sin_msg = Float32()
         cos_msg = Float32()
-        sin_msg.data = math.sin(self.t)
-        cos_msg.data = math.cos(self.t)
+        sin_msg.data = 10 * math.sin(self.t)
+        cos_msg.data = 10 * math.cos(self.t)
         self.publisher_sin.publish(sin_msg)
         self.publisher_cos.publish(cos_msg)
         self.get_logger().info(f'Sin: {sin_msg.data:.2f}, Cos: {cos_msg.data:.2f}')
