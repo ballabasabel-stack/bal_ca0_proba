@@ -3,8 +3,8 @@
 <package format="3">
   <name>bal_ca0_proba</name>
   <version>0.0.0</version>
-
-  <maintainer> email="ballabasabel@gmail.com"</maintainer>
+  <description>sin_cos_wave</description>
+  <maintainer email="ballabasabel@gmail.com">TODO:</maintainer>
   <license>GNU General Public License v3.0</license>
 
 <depend>rclpy</depend>
