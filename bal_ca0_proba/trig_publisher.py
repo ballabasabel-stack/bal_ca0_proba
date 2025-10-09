@@ -6,7 +6,7 @@ import math
 class TrigPublisher(Node):
     def __init__(self):
         super().__init__('trig_publisher')
-        self.publisher_sin = self.create_publisher(Float32, 'sin_wave', 100)
+        self.publisher_sin = self.create_publisher(Float32, 'sin_wave', 10)
         self.publisher_cos = self.create_publisher(Float32, 'cos_wave', 10)
         self.timer = self.create_timer(0.1, self.timer_callback)
         self.t = 0.0
@@ -19,7 +19,7 @@ class TrigPublisher(Node):
         self.publisher_sin.publish(sin_msg)
         self.publisher_cos.publish(cos_msg)
         self.get_logger().info(f'Sin: {sin_msg.data:.2f}, Cos: {cos_msg.data:.2f}')
-        self.t += 0.1
+        self.t += 10
 
 def main():
     rclpy.init()
