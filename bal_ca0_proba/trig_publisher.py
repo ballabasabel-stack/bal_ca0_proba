@@ -21,12 +21,12 @@ class TrigPublisher(Node):
         self.get_logger().info(f'Sin: {sin_msg.data:.2f}, Cos: {cos_msg.data:.2f}')
         self.t += 0.1
 
-def main(args=None):
-    rclpy.init(args=args)
+def main():
+    rclpy.init()
     node = TrigPublisher()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
