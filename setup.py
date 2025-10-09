@@ -21,8 +21,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'trig_wave_publisher = bal_ca0_proba.trig_publisher:main',
-            'trig_wave_subscriber = bal_ca0_proba.trig_subscriber:main',
+            'trig_publisher = bal_ca0_proba.trig_publisher:main',
+            'trig_subscriber = bal_ca0_proba.trig_subscriber:main',
         ],
     },
 )
